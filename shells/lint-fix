@@ -1,0 +1,4 @@
+#!/bin/sh
+
+concurrently --names "Fix Scripts" --prefix-colors "bgRed.bold" "npm:lint:scripts:fix --silent" &&
+  concurrently --names "Check Types" --prefix-colors "bgCyan.bold" "npm:lint:ts --silent"
