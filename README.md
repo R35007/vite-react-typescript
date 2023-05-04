@@ -18,7 +18,7 @@ This template setup will include following features.
 | ✅  | ESLint Airbnb Config and Plugins       | feature/4/eslint           |
 | ✅  | StyleLint                              | feature/5/stylelint        |
 | ✅  | Prettier format                        | feature/6/prettier         |
-| ◼️  | Lint Staged                            | feature/7/lint-staged      |
+| ✅  | Lint Staged                            | feature/7/lint-staged      |
 | ◼️  | Sass + Tailwind css                    | feature/8/tailwindcss      |
 | ◼️  | Material UI                            | feature/9/material-ui      |
 | ◼️  | React Router Setup                     | feature/10/tanstack-router |
@@ -55,7 +55,7 @@ npm run format:fix            # fix code formatting
 npm run lint:ts               # check types
 npm run lint                  # check scripts, check styles, check formats and check types
 npm run lint:fix              # fix scripts, fix styles, fix formats and check types
-
+npm run lint:staged           # does npm run lint only for staged files
 
 # Reports
 npm run lint:scripts:report   # generate eslint reports in reports/eslint.html
@@ -64,6 +64,7 @@ npm run lint:report           # generate eslint reports
 # Utils
 npm run validate              # check scripts, check styles, check formats, check types and builds the project
 npm run validate:fix          # fix scripts, fix styles, fix formats, check types and builds the project
+npm run validate:staged       # does npm run lint only for staged files and builds the project
 npm run prepare               # create Husky hooks
 npm run clean                 # removes node_modules package-lock.json .husky dist reports
 npm run uninstall:husky       # uninstall husky and remove .husky folder

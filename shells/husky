@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Pre Commit Hooks
-husky set .husky/pre-commit 'npm run validate'
+husky add .husky/pre-commit 'npm run validate:staged'
 
 # Commit Message Hooks
 husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
