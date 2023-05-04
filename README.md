@@ -13,7 +13,7 @@ This template setup will include following features.
 | ◼️  | Feature                                | Branch Name                |
 | --- | -------------------------------------- | :------------------------- |
 | ✅  | Generate Vite + React + Typescript App | feature/1/starter          |
-| ◼️  | Husky                                  | feature/2/husky            |
+| ✅  | Husky                                  | feature/2/husky            |
 | ◼️  | Conventional Commit                    | feature/3/commitlint       |
 | ◼️  | ESLint Airbnb Config and Plugins       | feature/4/eslint           |
 | ◼️  | StyleLint                              | feature/5/stylelint        |
@@ -46,7 +46,13 @@ npm run build                 # build production bundle to 'dist' directly
 npm run preview               # start production server
 
 # Lints
-npm run lint                  # run eslint
+npm run lint:scripts          # check scripts
+npm run lint                  # check scripts
+
+# Utils
+npm run validate              # check scripts and builds the project
+npm run prepare               # create Husky hooks
+npm run uninstall:husky       # uninstall husky and remove .husky folder
 ```
 
 # License
