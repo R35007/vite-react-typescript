@@ -2,7 +2,8 @@
 
 concurrently \
   --kill-others-on-fail \
-  --names "Check Scripts,Check Types" \
-  --prefix-colors "bgRed.bold,bgCyan.bold" \
+  --names "Check Scripts,Check Styles,Check Types" \
+  --prefix-colors "bgRed.bold,bgBlue.bold,bgCyan.bold" \
   "npm:lint:scripts --silent" \
+  "npm:lint:styles --silent" \
   "npm:lint:ts --silent"

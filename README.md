@@ -16,7 +16,7 @@ This template setup will include following features.
 | ✅  | Husky                                  | feature/2/husky            |
 | ✅  | Conventional Commit                    | feature/3/commitlint       |
 | ✅  | ESLint Airbnb Config and Plugins       | feature/4/eslint           |
-| ◼️  | StyleLint                              | feature/5/stylelint        |
+| ✅  | StyleLint                              | feature/5/stylelint        |
 | ◼️  | Prettier format                        | feature/6/prettier         |
 | ◼️  | Lint Staged                            | feature/7/lint-staged      |
 | ◼️  | Sass + Tailwind css                    | feature/8/tailwindcss      |
@@ -48,6 +48,8 @@ npm run preview               # start production server
 # Lints
 npm run lint:scripts          # check scripts
 npm run lint:scripts:fix      # fix scripts
+npm run lint:styles           # check styles
+npm run lint:styles:fix       # fix styles
 npm run lint:ts               # check types
 npm run lint                  # check scripts and check types
 npm run lint:fix              # fix scripts and check types
