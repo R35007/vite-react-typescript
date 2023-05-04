@@ -11,9 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+.husky
+reports
 
 # Editor directories and files
-.husky
 .idea
 .DS_Store
 *.suo

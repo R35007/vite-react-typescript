@@ -1,0 +1,7 @@
+#!/bin/sh
+
+concurrently \
+  --kill-others-on-fail \
+  --names "ESLint Report" \
+  --prefix-colors "bgRed.bold" \
+  "npm:lint:scripts:report --silent"
