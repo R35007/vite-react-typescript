@@ -12,19 +12,23 @@
     "preview": "vite preview",
     "validate": "sh ./shells/validate",
     "prepare": "npx rimraf .husky && husky install && sh ./shells/husky",
-    "uninstall:husky": "npm uninstall husky --no-save && git config --unset core.hooksPath && npx rimraf .husky"
+    "uninstall:husky": "npm uninstall husky --no-save && git config --unset core.hooksPath && npx rimraf .husky",
+    "commit": "cz"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "concurrently": "^8.0.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",

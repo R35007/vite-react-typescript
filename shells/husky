@@ -2,3 +2,6 @@
 
 # Pre Commit Hooks
 husky set .husky/pre-commit 'npm run validate'
+
+# Commit Message Hooks
+husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'

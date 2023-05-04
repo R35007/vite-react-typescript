@@ -14,7 +14,7 @@ This template setup will include following features.
 | --- | -------------------------------------- | :------------------------- |
 | ✅  | Generate Vite + React + Typescript App | feature/1/starter          |
 | ✅  | Husky                                  | feature/2/husky            |
-| ◼️  | Conventional Commit                    | feature/3/commitlint       |
+| ✅  | Conventional Commit                    | feature/3/commitlint       |
 | ◼️  | ESLint Airbnb Config and Plugins       | feature/4/eslint           |
 | ◼️  | StyleLint                              | feature/5/stylelint        |
 | ◼️  | Prettier format                        | feature/6/prettier         |
@@ -53,6 +53,7 @@ npm run lint                  # check scripts
 npm run validate              # check scripts and builds the project
 npm run prepare               # create Husky hooks
 npm run uninstall:husky       # uninstall husky and remove .husky folder
+npm run commit                # cli prompt for conventional commit
 ```
 
 # License
