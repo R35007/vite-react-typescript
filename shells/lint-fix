@@ -2,4 +2,5 @@
 
 concurrently --names "Fix Scripts" --prefix-colors "bgRed.bold" "npm:lint:scripts:fix --silent" &&
   concurrently --names "Fix Styles" --prefix-colors "bgBlue.bold" "npm:lint:styles:fix --silent" &&
+  concurrently --names "Fix Formats" --prefix-colors "bgYellow.bold" "npm:format:fix --silent" &&
   concurrently --names "Check Types" --prefix-colors "bgCyan.bold" "npm:lint:ts --silent"
