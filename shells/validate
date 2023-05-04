@@ -1,0 +1,8 @@
+#!/bin/sh
+
+concurrently \
+  --kill-others-on-fail \
+  --names "Lints,Build" \
+  --prefix-colors "yellow.bold,bgGreen.bold" \
+  "npm run lint --silent" \
+  "npm run build --silent"

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Pre Commit Hooks
+husky set .husky/pre-commit 'npm run validate'
