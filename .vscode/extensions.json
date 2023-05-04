@@ -1,3 +1,3 @@
 {
-  "recommendations": ["dbaeumer.vscode-eslint", "foxundermoon.shell-format"]
+  "recommendations": ["dbaeumer.vscode-eslint", "foxundermoon.shell-format", "stylelint.vscode-stylelint"]
 }
