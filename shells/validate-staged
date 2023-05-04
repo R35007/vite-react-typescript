@@ -1,0 +1,8 @@
+#!/bin/sh
+
+concurrently \
+  --kill-others-on-fail \
+  --names "Lint Staged,Build" \
+  --prefix-colors "yellow.bold,bgGreen.bold" \
+  "npm:lint:staged --silent" \
+  "npm:build --silent"
