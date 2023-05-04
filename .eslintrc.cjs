@@ -1,14 +1,25 @@
 module.exports = {
   env: { browser: true, es2020: true },
   extends: [
-    'eslint:recommended',
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
   ],
   parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  parserOptions: { ecmaVersion: 'latest', project: true, sourceType: 'module' },
   plugins: ['react-refresh'],
   rules: {
+    '@typescript-eslint/consistent-type-imports': 'warn',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/prefer-as-const': 'warn',
+    'import/no-absolute-path': 0,
+    'linebreak-style': 0,
+    quotes: ['error', 'single'],
+    'react-hooks/rules-of-hooks': 'error',
     'react-refresh/only-export-components': 'warn',
+    'react/react-in-jsx-scope': 0,
+    semi: 1,
   },
-}
+};
