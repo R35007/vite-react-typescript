@@ -2,9 +2,9 @@
 
 A simple vite react typescript starter template with husky, conventional commit, eslint, stylelint, prettier, sass, tailwindcss, material ui, tanstack routing, redux and saga, vitest and cypress
 
-## [Trying this Online!](https://codesandbox.io/p/github/R35007/vite-react-typescript/main?file=%2FREADME.md)
+## [Trying this Online!](https://codesandbox.io/p/github/R35007/vite-react-typescript/main?file=%2Fsrc%2FApp.tsx)
 
-![image](https://user-images.githubusercontent.com/23217228/235298200-28c7b4a6-0f92-420c-9410-b05d12de8eff.png)
+![image](https://user-images.githubusercontent.com/23217228/236537463-bbb92d9a-da7e-4b56-bb77-95adef6551ca.png)
 
 ## Features
 
@@ -20,7 +20,7 @@ This template setup will include following features.
 | ✅  | Prettier format                        | feature/6/prettier         |
 | ✅  | Lint Staged                            | feature/7/lint-staged      |
 | ✅  | Sass + Tailwind css                    | feature/8/tailwindcss      |
-| ◼️  | Material UI                            | feature/9/material-ui      |
+| ✅  | Material UI                            | feature/9/material-ui      |
 | ◼️  | React Router Setup                     | feature/10/tanstack-router |
 | ◼️  | Redux + Redux Toolkit                  | feature/11/react-redux     |
 | ◼️  | Redux Saga                             | feature/12/react-saga      |
@@ -39,13 +39,18 @@ npx degit R35007/vite-react-typescript#feature/1/starter myapp # feature/1/start
 
 ## NPM Scripts
 
+### Vite scripts
+
 ```bash
 npm run start                 # start development server
 npm run dev                   # start development server
 npm run build                 # build production bundle to 'dist' directly
 npm run preview               # start production server
+```
 
-# Lints
+### Lint scripts
+
+```bash
 npm run lint:scripts          # check scripts
 npm run lint:scripts:fix      # fix scripts
 npm run lint:styles           # check styles
@@ -56,12 +61,18 @@ npm run lint:ts               # check types
 npm run lint                  # check scripts, check styles, check formats and check types
 npm run lint:fix              # fix scripts, fix styles, fix formats and check types
 npm run lint:staged           # does npm run lint only for staged files
+```
 
-# Reports
+### Report scripts
+
+```bash
 npm run lint:scripts:report   # generate eslint reports in reports/eslint.html
 npm run lint:report           # generate eslint reports
+```
 
-# Utils
+### Utility scripts
+
+```bash
 npm run validate              # check scripts, check styles, check formats, check types and builds the project
 npm run validate:fix          # fix scripts, fix styles, fix formats, check types and builds the project
 npm run validate:staged       # does npm run lint only for staged files and builds the project
