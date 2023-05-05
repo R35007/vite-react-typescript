@@ -26,6 +26,7 @@
     "prepare": "npx rimraf .husky && husky install && sh ./shells/husky",
     "clean": "rimraf node_modules package-lock.json .husky dist reports",
     "uninstall:husky": "npm uninstall husky --no-save && git config --unset core.hooksPath && npx rimraf .husky",
+    "uninstall:tailwindcss": "node ./scripts/uninstall-tailwind.cjs",
     "commit": "cz"
   },
   "dependencies": {
