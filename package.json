@@ -41,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.14",
     "concurrently": "^8.0.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.38.0",
@@ -60,6 +61,7 @@
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.2",
+    "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "rimraf": "^5.0.0",
     "sass": "^1.62.1",
@@ -67,6 +69,7 @@
     "stylelint-config-recommended": "^12.0.0",
     "stylelint-config-standard": "^33.0.0",
     "stylelint-config-standard-scss": "^9.0.0",
+    "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vite-tsconfig-paths": "^4.2.0"
