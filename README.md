@@ -19,7 +19,7 @@ This template setup will include following features.
 | ✅  | StyleLint                              | feature/5/stylelint        |
 | ✅  | Prettier format                        | feature/6/prettier         |
 | ✅  | Lint Staged                            | feature/7/lint-staged      |
-| ◼️  | Sass + Tailwind css                    | feature/8/tailwindcss      |
+| ✅  | Sass + Tailwind css                    | feature/8/tailwindcss      |
 | ◼️  | Material UI                            | feature/9/material-ui      |
 | ◼️  | React Router Setup                     | feature/10/tanstack-router |
 | ◼️  | Redux + Redux Toolkit                  | feature/11/react-redux     |
@@ -68,6 +68,7 @@ npm run validate:staged       # does npm run lint only for staged files and buil
 npm run prepare               # create Husky hooks
 npm run clean                 # removes node_modules package-lock.json .husky dist reports
 npm run uninstall:husky       # uninstall husky and remove .husky folder
+npm run uninstall:tailwindcss # uninstall tailwindcss and its related plugins
 npm run commit                # cli prompt for conventional commit
 ```
 
