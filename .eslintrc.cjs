@@ -20,6 +20,7 @@ module.exports = defineConfig({
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:prettier/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', project: true, sourceType: 'module' },
@@ -63,6 +64,17 @@ module.exports = defineConfig({
     },
     react: {
       version: 'detect',
+    },
+    tailwindcss: {
+      callees: ['classnames', 'clsx', 'ctl'],
+      classRegex: '^class(Name)?$',
+      config: 'tailwind.config.js',
+      cssFiles: ['**/*.css', '**/*.scss', '!**/node_modules', '!**/.*', '!**/dist', '!**/build'],
+      cssFilesRefreshRate: 5_000,
+      removeDuplicates: true,
+      skipClassAttribute: false,
+      tags: [],
+      whitelist: [], // can be modified to support custom attributes. E.g. "^tw$" for `twin.macro`
     },
   },
 });
