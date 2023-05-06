@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // material ui
+import { deepPurple } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -15,6 +16,7 @@ import './index.scss';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    primary: { main: deepPurple[500] },
   },
 });
 

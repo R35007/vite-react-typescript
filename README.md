@@ -21,7 +21,7 @@ This template setup will include following features.
 | ✅  | Lint Staged                            | feature/7/lint-staged      |
 | ✅  | Sass + Tailwind css                    | feature/8/tailwindcss      |
 | ✅  | Material UI                            | feature/9/material-ui      |
-| ◼️  | React Router Setup                     | feature/10/tanstack-router |
+| ✅  | React Router Setup                     | feature/10/tanstack-router |
 | ◼️  | Redux + Redux Toolkit                  | feature/11/react-redux     |
 | ◼️  | Redux Saga                             | feature/12/react-saga      |
 | ◼️  | Vitest + RTL                           | feature/13/vitest          |

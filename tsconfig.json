@@ -9,7 +9,9 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["./src/components/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages/*": ["./src/pages/*"]
     },
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -19,6 +21,7 @@
     "jsx": "react-jsx",
 
     /* Linting */
+    "types": ["vite-plugin-svgr/client"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
