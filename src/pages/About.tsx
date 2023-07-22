@@ -13,18 +13,15 @@ import WelcomeCard from '@features/WelcomeCard';
 // routes
 import { rootRoute } from 'src/App';
 
-function Home() {
+function About() {
   return (
     <Container maxWidth={false} sx={{ display: 'flex', height: '100vh', placeContent: 'center' }}>
-      <WelcomeCard title="Home" />
+      <WelcomeCard title="About" />
     </Container>
   );
 }
 
-// Index route
-export const homeRoute = new Route({ component: Home, getParentRoute: () => rootRoute, path: Routes.HOME });
+// About route
+export const aboutRoute = new Route({ component: About, getParentRoute: () => rootRoute, path: Routes.ABOUT });
 
-// Not Found route
-export const notFoundRoute = new Route({ component: Home, getParentRoute: () => rootRoute, path: Routes.NOT_FOUND });
-
-export default Home;
+export default About;

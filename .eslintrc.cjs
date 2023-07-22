@@ -43,7 +43,7 @@ module.exports = defineConfig({
     'prettier/prettier': ['error', {}, { properties: { usePrettierrc: true } }],
     quotes: ['error', 'single'],
     'react-hooks/rules-of-hooks': 'error',
-    'react-refresh/only-export-components': 'warn',
+    'react-refresh/only-export-components': 0,
     'react/react-in-jsx-scope': 0,
     'react/require-default-props': 0,
     semi: 1,
