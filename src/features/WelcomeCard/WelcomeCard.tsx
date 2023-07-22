@@ -1,5 +1,4 @@
 // built-ins
-import { useState } from 'react';
 
 // svgs
 import reactLogo from '@assets/react.svg';
@@ -14,10 +13,14 @@ import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 
 // styled components
+import { Box } from '@mui/material';
+import { useAppDispatch, useAppSelector } from 'src/configs/store';
 import Logo from './Logo.style';
+import { decrement, getCount, increment } from './countSlice';
 
 function WelcomeCard({ title = 'Welcome' }: { title: string }) {
-  const [count, setCount] = useState(0);
+  const count = useAppSelector(getCount);
+  const dispatch = useAppDispatch();
 
   return (
     <Card sx={{ background: 'palette.background.paper', margin: 'auto', maxWidth: '45rem', textAlign: 'center' }} className="p-8">
@@ -32,9 +35,15 @@ function WelcomeCard({ title = 'Welcome' }: { title: string }) {
       </CardContent>
       <Typography variant="h3">Vite + React</Typography>
       <CardContent>
-        <Button variant="contained" onClick={() => setCount((previousCount) => previousCount + 1)}>
-          count is {count}
-        </Button>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Button variant="contained" color="warning" onClick={() => dispatch(decrement(2))}>
+            Decrement By 2
+          </Button>
+          <Button variant="contained" onClick={() => dispatch(increment(2))}>
+            Increment By 2
+          </Button>
+        </Box>
+        <Typography className="my-5">count is {count}</Typography>
         <Typography className="my-5">
           Edit <code>src/App.tsx</code> and save to test HMR
         </Typography>
