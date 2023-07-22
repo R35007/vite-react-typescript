@@ -4,7 +4,7 @@ import type { TypedUseSelectorHook } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 
 // reducers
-import countReducer from '@features/WelcomeCard/countSlice';
+import countReducer from '@features/Counter/countSlice';
 
 const store = configureStore({
   reducer: {
