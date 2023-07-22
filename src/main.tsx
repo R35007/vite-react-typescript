@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { RouterProvider } from '@tanstack/router';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 
 // material ui
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,6 +13,7 @@ import './index.scss';
 
 // configs
 import router from './configs/router';
+import store from './configs/store';
 import theme from './configs/theme';
 
 // Register your router for maximum type safety
@@ -25,7 +27,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>
 );
