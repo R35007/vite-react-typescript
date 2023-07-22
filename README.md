@@ -4,7 +4,7 @@ A simple vite react typescript starter template with husky, conventional commit,
 
 ## [Trying this Online!](https://codesandbox.io/p/github/R35007/vite-react-typescript/main?file=%2Fsrc%2FApp.tsx)
 
-![image](https://user-images.githubusercontent.com/23217228/236537463-bbb92d9a-da7e-4b56-bb77-95adef6551ca.png)
+![image](https://github.com/R35007/vite-react-typescript/assets/23217228/d41b1831-0c89-4ff7-b2be-c8b4c6827a58)
 
 ## Features
 
@@ -21,7 +21,7 @@ This template setup will include following features.
 | ✅  | Lint Staged                            | feature/7/lint-staged      |
 | ✅  | Sass + Tailwind css                    | feature/8/tailwindcss      |
 | ✅  | Material UI                            | feature/9/material-ui      |
-| ◼️  | React Router Setup                     | feature/10/tanstack-router |
+| ✅  | React Router Setup                     | feature/10/tanstack-router |
 | ◼️  | Redux + Redux Toolkit                  | feature/11/react-redux     |
 | ◼️  | Redux Saga                             | feature/12/react-saga      |
 | ◼️  | Vitest + RTL                           | feature/13/vitest          |
