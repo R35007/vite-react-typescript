@@ -13,7 +13,8 @@
       "@layouts/*": ["./src/layouts/*"],
       "@pages/*": ["./src/pages/*"],
       "@features/*": ["./src/features/*"],
-      "@constants/*": ["./src/constants/*"]
+      "@constants/*": ["./src/constants/*"],
+      "@helpers/*": ["./src/helpers/*"]
     },
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

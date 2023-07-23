@@ -4,7 +4,7 @@ A simple vite react typescript starter template with husky, conventional commit,
 
 ## [Trying this Online!](https://codesandbox.io/p/github/R35007/vite-react-typescript/main?file=%2Fsrc%2FApp.tsx)
 
-![image](https://github.com/R35007/vite-react-typescript/assets/23217228/8287ffc7-9667-4a92-b0d7-daa685578a97)
+![image](https://github.com/R35007/vite-react-typescript/assets/23217228/4cb162b2-4c6a-4c5a-a1cc-e9022b049fdd)
 
 ## Features
 
@@ -23,7 +23,7 @@ This template setup will include following features.
 | ✅  | Material UI                            | feature/9/material-ui      |
 | ✅  | React Router Setup                     | feature/10/tanstack-router |
 | ✅  | Redux + Redux Toolkit                  | feature/11/react-redux     |
-| ◼️  | Redux Saga                             | feature/12/react-saga      |
+| ✅  | Redux Saga                             | feature/12/react-saga      |
 | ◼️  | Vitest + RTL                           | feature/13/vitest          |
 | ◼️  | Cypress E2E Testing                    | feature/14/cypress         |
 

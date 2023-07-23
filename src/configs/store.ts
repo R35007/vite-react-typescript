@@ -1,19 +1,23 @@
-// built-ins
-import { configureStore } from '@reduxjs/toolkit';
-import type { TypedUseSelectorHook } from 'react-redux';
-import { useDispatch, useSelector } from 'react-redux';
+// helpers
+import configureStore from '@helpers/configureStore';
 
 // reducers
-import countReducer from '@features/Counter/countSlice';
+import counterReducer from '@features/Counter/reducer/slice';
 
-const store = configureStore({
+// sagas
+import counterSaga from '@features/Counter/reducer/saga';
+
+// helpers
+import getRootSaga from '@helpers/getRootSaga';
+
+const { store, runSaga, useDispatch, useSelector } = configureStore({
   reducer: {
-    counter: countReducer,
+    counter: counterReducer,
   },
 });
 
-export default store;
+runSaga(getRootSaga([counterSaga]));
 
-// Use throughout your app instead of plain `useDispatch` and `useSelector`
-export const useAppDispatch = () => useDispatch<typeof store.dispatch>();
-export const useAppSelector: TypedUseSelectorHook<ReturnType<typeof store.getState>> = useSelector;
+export { useDispatch, useSelector };
+
+export default store;
