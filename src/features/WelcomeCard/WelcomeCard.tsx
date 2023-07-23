@@ -1,5 +1,3 @@
-// built-ins
-
 // svgs
 import reactLogo from '@assets/react.svg';
 import viteLogo from '@assets/vite.svg';
@@ -28,7 +26,7 @@ function WelcomeCard({ title = 'Welcome' }: { title: string }) {
         </Logo>
       </CardContent>
       <Typography variant="h3">Vite + React</Typography>
-      <CardContent>
+      <CardContent className="p-0">
         <Counter />
         <Typography className="my-5">
           Edit <code>src/App.tsx</code> and save to test HMR
