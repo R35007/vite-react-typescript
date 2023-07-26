@@ -1,46 +1,65 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // built-ins
 import { configureStore as createStore } from '@reduxjs/toolkit';
-import { useDispatch, useSelector } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 
 // types
-import type { Action, AnyAction, ConfigureStoreOptions, Middleware, StoreEnhancer } from '@reduxjs/toolkit';
-import type { ThunkMiddlewareFor } from '@reduxjs/toolkit/dist/getDefaultMiddleware';
-import type { TypedUseSelectorHook } from 'react-redux';
+import type {
+  Action,
+  AnyAction,
+  ConfigureStoreOptions,
+  Dispatch,
+  EnhancedStore,
+  Middleware,
+  StoreEnhancer,
+  ThunkMiddleware,
+} from '@reduxjs/toolkit';
+import type { Saga } from 'redux-saga';
 
 export interface ConfigureStoreProps<
   S,
   A extends Action = AnyAction,
-  M extends ReadonlyArray<Middleware<object, S>> = [ThunkMiddlewareFor<S>],
+  M extends ReadonlyArray<Middleware<object, S>> = [ThunkMiddleware<S, A>],
   E extends ReadonlyArray<StoreEnhancer> = [StoreEnhancer]
 > extends Omit<ConfigureStoreOptions<S, A, M, E>, 'middleware'> {
-  middleware?: Array<Middleware<object, S>>;
+  middleware?: Array<Middleware<object, S, Dispatch<A>>>;
+  sagaActionWatcher?: Saga;
 }
 
 const configureStore = <
   S = any,
   A extends Action = AnyAction,
-  M extends ReadonlyArray<Middleware<object, S>> = [ThunkMiddlewareFor<S>],
+  M extends ReadonlyArray<Middleware<object, S>> = [ThunkMiddleware<S, A>],
   E extends ReadonlyArray<StoreEnhancer> = [StoreEnhancer]
 >({
   middleware = [],
+  sagaActionWatcher,
   ...configureStoreProps
 }: ConfigureStoreProps<S, A, M, E>) => {
+  const rootMiddlewares = [...middleware];
+
   // create the saga middleware
   const sagaMiddleware = createSagaMiddleware();
 
-  const store = createStore({
+  if (sagaActionWatcher) {
+    rootMiddlewares.push(sagaMiddleware);
+  }
+
+  const store: EnhancedStore<S, A, Middleware<object, S, Dispatch<A>>[], E> = createStore({
     ...configureStoreProps,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middleware).concat(sagaMiddleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(rootMiddlewares),
   });
 
-  return {
-    runSaga: sagaMiddleware.run.bind(sagaMiddleware),
-    store,
-    useDispatch: () => useDispatch<typeof store.dispatch>(),
-    useSelector: useSelector as TypedUseSelectorHook<ReturnType<typeof store.getState>>,
-  };
+  // run saga middleware
+  if (sagaActionWatcher) {
+    sagaMiddleware.run(sagaActionWatcher);
+  }
+
+  return store;
 };
+
+export type SliceActions<T> = {
+  [K in keyof T]: T[K] extends (...args: any[]) => infer A ? A : never;
+}[keyof T];
 
 export default configureStore;

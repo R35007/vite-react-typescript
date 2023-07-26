@@ -8,21 +8,18 @@ import CircularProgress from '@mui/material/CircularProgress';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-// hooks
-import { useDispatch, useSelector } from 'src/configs/store';
+// App store
+import { useAppDispatch, useAppSelector } from '@configs/store';
 
-// actions
-import { counterActions } from './reducer/slice';
-
-// selectors
-import { getCount, getLoading } from './reducer/selectors';
+// redux
+import { actions, selectors } from './redux';
 
 function Counter() {
   const inputRef = useRef<HTMLInputElement>(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const count = useSelector(getCount);
-  const isLoading = useSelector(getLoading);
+  const count = useAppSelector(selectors.getCount);
+  const isLoading = useAppSelector(selectors.getLoading);
 
   return (
     <Box className="relative">
@@ -41,25 +38,22 @@ function Counter() {
         />
       </Box>
       <Box sx={{ boxShadow: 'none', display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
-        <Button variant="contained" onClick={() => dispatch(counterActions.decrement())}>
+        <Button variant="contained" onClick={() => dispatch(actions.decrement())}>
           Decrement By 1
         </Button>
-        <Button variant="contained" onClick={() => dispatch(counterActions.increment())}>
+        <Button variant="contained" onClick={() => dispatch(actions.increment())}>
           Increment By 1
         </Button>
-        <Button
-          variant="contained"
-          onClick={() => dispatch(counterActions.incrementByAmount(parseInt(inputRef.current?.value || '0', 10)))}
-        >
+        <Button variant="contained" onClick={() => dispatch(actions.incrementByAmount(parseInt(inputRef.current?.value || '0', 10)))}>
           Increment By Value
         </Button>
-        <Button variant="contained" onClick={() => dispatch(counterActions.decrementAsync())}>
+        <Button variant="contained" onClick={() => dispatch(actions.decrementAsync())}>
           Decrement Async By 1
         </Button>
-        <Button variant="contained" onClick={() => dispatch(counterActions.incrementAsync())}>
+        <Button variant="contained" onClick={() => dispatch(actions.incrementAsync())}>
           Increment Async By 1
         </Button>
-        <Button variant="contained" onClick={() => dispatch(counterActions.incrementByAmountAsync(inputRef.current?.value))}>
+        <Button variant="contained" onClick={() => dispatch(actions.incrementByAmountAsync(inputRef.current?.value))}>
           Increment Async By Value
         </Button>
       </Box>
