@@ -37,7 +37,7 @@ module.exports = defineConfig({
     'import/no-duplicates': 'error',
     'import/no-named-as-default': 'error',
     'import/no-named-as-default-member': 'off',
-    'import/no-namespace': 'error',
+    'import/no-namespace': 'off',
     'linebreak-style': 0,
     'no-loops/no-loops': 1,
     'prettier/prettier': ['error', {}, { properties: { usePrettierrc: true } }],

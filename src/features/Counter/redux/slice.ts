@@ -6,12 +6,12 @@ import { createSlice } from '@reduxjs/toolkit';
 // type
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-type InitialState = {
+export type InitialState = {
   loading: boolean;
   count: number;
 };
 
-const initialState: InitialState = {
+export const initialState: InitialState = {
   count: 0,
   loading: false,
 };
@@ -60,4 +60,4 @@ const countSlice = createSlice({
 });
 
 export default countSlice.reducer;
-export const counterActions = countSlice.actions;
+export const { actions } = countSlice;
