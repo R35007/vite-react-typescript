@@ -8,8 +8,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-// App store
-import { useAppDispatch, useAppSelector } from '@configs/store';
+// hooks
+import { useAppDispatch, useAppSelector } from '@configs/store/hooks';
 
 // redux
 import { actions, selectors } from './redux';
