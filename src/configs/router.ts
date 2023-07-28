@@ -2,9 +2,9 @@
 import { Router } from '@tanstack/router';
 
 // routes
-import { aboutRoute } from '@pages/About';
-import { homeRoute, notFoundRoute } from '@pages/Home';
 import { rootRoute } from 'src/App';
+import { aboutRoute } from '~pages/About';
+import { homeRoute, notFoundRoute } from '~pages/Home';
 
 // Create the route tree using your routes
 const routeTree = rootRoute.addChildren([homeRoute, aboutRoute, notFoundRoute]);

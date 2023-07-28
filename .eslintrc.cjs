@@ -22,6 +22,14 @@ module.exports = defineConfig({
     'plugin:import/typescript',
     'plugin:tailwindcss/recommended',
   ],
+  overrides: [
+    {
+      files: ['*.test.{ts|tsx}'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', project: true, sourceType: 'module' },
   plugins: ['react', 'react-refresh', '@typescript-eslint', 'jsx-a11y', 'promise', 'no-loops', 'import', 'prettier', 'sort-keys-fix'],

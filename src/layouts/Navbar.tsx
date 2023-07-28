@@ -2,14 +2,13 @@
 import { Link } from '@tanstack/router';
 import React, { useState } from 'react';
 
-// enums
-import Routes from 'src/constants/routes.enum';
+// icons
+import MenuIcon from '@mui/icons-material/Menu';
 
 // material ui components
-import MenuIcon from '@mui/icons-material/Menu';
-import { Button } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Icon from '@mui/material/Icon';
 import IconButton from '@mui/material/IconButton';
@@ -18,8 +17,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
+// enums
+import Routes from '~constants/routes.enum';
+
 // svgs
-import { ReactComponent as ViteLogo } from '../assets/vite.svg';
+import { ReactComponent as ViteLogo } from '~assets/vite.svg';
 
 const links: Array<[Routes, string]> = [
   [Routes.HOME, 'Home'],

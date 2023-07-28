@@ -1,8 +1,8 @@
 // feature redux
-import * as counter from '@features/Counter/redux';
+import * as counter from '~features/Counter/redux';
 
 // helpers
-import getRootSaga from '@helpers/getRootSaga';
+import getRootSaga from '~helpers/getRootSaga';
 
 const rootSagas = [counter.saga];
 

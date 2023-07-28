@@ -11,13 +11,13 @@ import { actions } from './slice';
 export function* watchIncrementAsync(): Generator<Effect, void> {
   yield delay(1000);
   yield put(actions.increment());
-  yield put(actions.incrementByAmountAsyncSuccess());
+  yield put(actions.onIncrementSuccess());
 }
 
 export function* watchDecrementAsync(): Generator<Effect, void> {
   yield delay(1000);
   yield put(actions.decrement());
-  yield put(actions.incrementByAmountAsyncSuccess());
+  yield put(actions.onIncrementSuccess());
 }
 
 export function* watchIncrementByAmountAsync(action: PayloadAction<string | undefined>): Generator<Effect, void> {
@@ -27,9 +27,9 @@ export function* watchIncrementByAmountAsync(action: PayloadAction<string | unde
     }
     yield delay(1000);
     yield put(actions.incrementByAmount(parseInt(action.payload, 10)));
-    yield put(actions.incrementByAmountAsyncSuccess());
+    yield put(actions.onIncrementSuccess());
   } catch (error) {
-    yield put(actions.incrementByAmountAsyncFailure());
+    yield put(actions.onIncrementFailure());
   }
 }
 

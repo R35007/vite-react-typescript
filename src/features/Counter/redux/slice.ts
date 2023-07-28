@@ -26,11 +26,11 @@ const reducers = {
   incrementByAmount: (state: InitialState, action: PayloadAction<number>) => {
     state.count += action.payload;
   },
-  incrementByAmountAsyncFailure: (state: InitialState) => {
+  onIncrementFailure: (state: InitialState) => {
     state.count = 0;
     state.loading = false;
   },
-  incrementByAmountAsyncSuccess: (state: InitialState) => {
+  onIncrementSuccess: (state: InitialState) => {
     state.loading = false;
   },
 };
@@ -50,7 +50,7 @@ const sagaActions = {
   },
 };
 
-const countSlice = createSlice({
+export const counterSlice = createSlice({
   initialState,
   name: 'counter',
   reducers: {
@@ -59,5 +59,5 @@ const countSlice = createSlice({
   },
 });
 
-export default countSlice.reducer;
-export const { actions } = countSlice;
+export default counterSlice.reducer;
+export const { actions } = counterSlice;

@@ -1,5 +1,4 @@
 // built-ins
-import { ThemeProvider } from '@mui/material/styles';
 import { RouterProvider } from '@tanstack/router';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -7,14 +6,15 @@ import { Provider } from 'react-redux';
 
 // material ui
 import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 
 // styles
 import './index.scss';
 
 // configs
-import router from './configs/router';
-import store from './configs/store';
-import theme from './configs/theme';
+import router from '~configs/router';
+import store from '~configs/store';
+import theme from '~configs/theme';
 
 // Register your router for maximum type safety
 declare module '@tanstack/router' {

@@ -1,5 +1,5 @@
 // helpers
-import configureStore from '@helpers/configureStore';
+import configureStore from '~helpers/configureStore';
 
 // Root Reducer, Actions and Sagas
 import rootReducer from './rootReducer';

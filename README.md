@@ -24,7 +24,7 @@ This template setup will include following features.
 | ✅  | React Router Setup                     | feature/10/tanstack-router |
 | ✅  | Redux + Redux Toolkit                  | feature/11/react-redux     |
 | ✅  | Redux Saga                             | feature/12/react-saga      |
-| ◼️  | Vitest + RTL                           | feature/13/vitest          |
+| ✅  | Vitest + RTL                           | feature/13/vitest          |
 | ◼️  | Cypress E2E Testing                    | feature/14/cypress         |
 
 ## Installation
