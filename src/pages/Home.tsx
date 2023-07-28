@@ -5,10 +5,10 @@ import { Route } from '@tanstack/router';
 import Container from '@mui/material/Container';
 
 // enums
-import Routes from '@constants/routes.enum';
+import Routes from '~constants/routes.enum';
 
 // features
-import WelcomeCard from '@features/WelcomeCard';
+import WelcomeCard from '~features/WelcomeCard';
 
 // routes
 import { rootRoute } from 'src/App';
@@ -16,7 +16,7 @@ import { rootRoute } from 'src/App';
 function Home() {
   return (
     <Container maxWidth={false} sx={{ display: 'flex', height: '100vh', placeContent: 'center' }}>
-      <WelcomeCard title="Home" />
+      <WelcomeCard title="Home Page" />
     </Container>
   );
 }

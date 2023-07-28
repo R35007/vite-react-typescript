@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .husky
 reports
+coverage
 
 # Editor directories and files
 .idea

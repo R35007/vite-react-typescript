@@ -8,14 +8,15 @@
     /* Bundler mode */
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@configs/*": ["./src/configs/*"],
-      "@layouts/*": ["./src/layouts/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@features/*": ["./src/features/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@helpers/*": ["./src/helpers/*"]
+      "~components/*": ["./src/components/*"],
+      "~assets/*": ["./src/assets/*"],
+      "~configs/*": ["./src/configs/*"],
+      "~layouts/*": ["./src/layouts/*"],
+      "~pages/*": ["./src/pages/*"],
+      "~features/*": ["./src/features/*"],
+      "~constants/*": ["./src/constants/*"],
+      "~helpers/*": ["./src/helpers/*"],
+      "~libs/*": ["./src/libs/*"]
     },
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -25,7 +26,7 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["vite-plugin-svgr/client", "vitest"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,

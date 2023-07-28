@@ -2,7 +2,8 @@
 
 concurrently \
   --kill-others-on-fail \
-  --names "Lints,Build" \
+  --names "Lints,Build,Test" \
   --prefix-colors "yellow.bold,bgGreen.bold" \
   "npm:lint --silent" \
-  "npm:build --silent"
+  "npm:build --silent" \
+  "npm:test --silent"

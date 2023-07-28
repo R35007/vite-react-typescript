@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 // hooks
-import { useAppDispatch, useAppSelector } from '@configs/store/hooks';
+import { useAppDispatch, useAppSelector } from '~configs/store/hooks';
 
 // redux
 import { actions, selectors } from './redux';
@@ -22,7 +22,7 @@ function Counter() {
   const isLoading = useAppSelector(selectors.getLoading);
 
   return (
-    <Box className="relative">
+    <Box className="Counter relative">
       {isLoading && (
         <Box className="absolute inset-0 z-10 grid w-full place-items-center bg-black opacity-70" sx={{ padding: '1rem' }}>
           <CircularProgress />
@@ -57,7 +57,9 @@ function Counter() {
           Increment Async By Value
         </Button>
       </Box>
-      <Typography className="my-5">count is {count}</Typography>
+      <Typography role="note" className="my-5">
+        count is {count}
+      </Typography>
     </Box>
   );
 }

@@ -14,6 +14,7 @@ dist-ssr
 .husky
 scripts
 reports
+coverage
 package-lock.json
 
 # Editor directories and files

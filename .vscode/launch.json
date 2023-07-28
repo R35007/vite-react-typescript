@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "command": "npm start",
+      "name": "Run npm start",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "npm test",
+      "name": "Test All Files",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "npm run coverage",
+      "name": "Test All Files with Coverage",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "npm test --silent '${relativeFileDirname}\\${fileBasename}'",
+      "name": "Test Current File",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "npm run test:coverage '${relativeFileDirname}\\${fileBasename}'",
+      "name": "Test Current File with Coverage",
+      "request": "launch",
+      "type": "node-terminal"
+    }
+  ],
+  "version": "0.2.0"
+}

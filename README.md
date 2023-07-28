@@ -24,7 +24,7 @@ This template setup will include following features.
 | ✅  | React Router Setup                     | feature/10/tanstack-router |
 | ✅  | Redux + Redux Toolkit                  | feature/11/react-redux     |
 | ✅  | Redux Saga                             | feature/12/react-saga      |
-| ◼️  | Vitest + RTL                           | feature/13/vitest          |
+| ✅  | Vitest + RTL                           | feature/13/vitest          |
 | ◼️  | Cypress E2E Testing                    | feature/14/cypress         |
 
 ## Installation
@@ -61,6 +61,13 @@ npm run lint:ts               # check types
 npm run lint                  # check scripts, check styles, check formats and check types
 npm run lint:fix              # fix scripts, fix styles, fix formats and check types
 npm run lint:staged           # does npm run lint only for staged files
+```
+
+### Test scripts
+
+```bash
+npm run test             # run test
+npm run test:coverage    # run test with code covereage
 ```
 
 ### Report scripts
