@@ -63,6 +63,13 @@ npm run lint:fix              # fix scripts, fix styles, fix formats and check t
 npm run lint:staged           # does npm run lint only for staged files
 ```
 
+### Test scripts
+
+```bash
+npm run test             # run test
+npm run test:coverage    # run test with code covereage
+```
+
 ### Report scripts
 
 ```bash
