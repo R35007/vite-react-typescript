@@ -1,4 +1,4 @@
-# Vite React Typescript Template
+# Vite React Typescript Template ![Build](https://github.com/R35007/vite-react-typescript/actions/workflows/build.yml/badge.svg) ![Lints](https://github.com/R35007/vite-react-typescript/actions/workflows/lints.yml/badge.svg) ![Tests](https://github.com/R35007/vite-react-typescript/actions/workflows/tests.yml/badge.svg)
 
 A simple vite react typescript starter template with husky, conventional commit, eslint, stylelint, prettier, sass, tailwindcss, material ui, tanstack routing, redux and saga, vitest and cypress
 
