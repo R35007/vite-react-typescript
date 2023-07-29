@@ -26,7 +26,7 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "types": ["vite-plugin-svgr/client", "vitest"],
+    "types": ["cypress", "@testing-library/cypress", "vite-plugin-svgr/client", "vitest"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -35,11 +35,13 @@
   "include": [
     ".eslintrc.cjs",
     "commitlint.config.cjs",
+    "cypress.config.ts",
     "vite.config.ts",
     ".prettierrc.cjs",
     "postcss.config.cjs",
     "tailwind.config.cjs",
-    "src"
+    "src",
+    "cypress"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

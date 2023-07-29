@@ -1,4 +1,6 @@
-# Vite React Typescript Template ![Build](https://github.com/R35007/vite-react-typescript/actions/workflows/build.yml/badge.svg) ![Lints](https://github.com/R35007/vite-react-typescript/actions/workflows/lints.yml/badge.svg) ![Tests](https://github.com/R35007/vite-react-typescript/actions/workflows/tests.yml/badge.svg)
+# Vite React Typescript Template
+
+![Build](https://github.com/R35007/vite-react-typescript/actions/workflows/build.yml/badge.svg) ![Lints](https://github.com/R35007/vite-react-typescript/actions/workflows/lints.yml/badge.svg) ![Tests](https://github.com/R35007/vite-react-typescript/actions/workflows/tests.yml/badge.svg) ![Cypress](https://github.com/R35007/vite-react-typescript/actions/workflows/cypress.yml/badge.svg)
 
 A simple vite react typescript starter template with husky, conventional commit, eslint, stylelint, prettier, sass, tailwindcss, material ui, tanstack routing, redux and saga, vitest and cypress
 
@@ -10,7 +12,7 @@ A simple vite react typescript starter template with husky, conventional commit,
 
 This template setup will include following features.
 
-| ◼️  | Feature                                | Branch Name                |
+| ✅  | Feature                                | Branch Name                |
 | --- | -------------------------------------- | :------------------------- |
 | ✅  | Generate Vite + React + Typescript App | feature/1/starter          |
 | ✅  | Husky                                  | feature/2/husky            |
@@ -25,7 +27,7 @@ This template setup will include following features.
 | ✅  | Redux + Redux Toolkit                  | feature/11/react-redux     |
 | ✅  | Redux Saga                             | feature/12/react-saga      |
 | ✅  | Vitest + RTL                           | feature/13/vitest          |
-| ◼️  | Cypress E2E Testing                    | feature/14/cypress         |
+| ✅  | Cypress E2E Testing                    | feature/14/cypress         |
 
 ## Installation
 
@@ -67,7 +69,11 @@ npm run lint:staged           # does npm run lint only for staged files
 
 ```bash
 npm run test             # run test
-npm run test:coverage    # run test with code covereage
+npm run test:coverage    # run test with code coverage
+npm run cy:open          # open cypress ui
+npm run cy:run           # run cypress test in headless mode
+npm run cy:run:e2e       # run cypress end 2 end test in headless mode
+npm run cy:run:component # run cypress component test in headless mode
 ```
 
 ### Report scripts

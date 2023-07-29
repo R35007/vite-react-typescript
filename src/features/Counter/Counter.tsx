@@ -57,7 +57,7 @@ function Counter() {
           Increment Async By Value
         </Button>
       </Box>
-      <Typography role="note" className="my-5">
+      <Typography role="note" className="my-5 text-center">
         count is {count}
       </Typography>
     </Box>

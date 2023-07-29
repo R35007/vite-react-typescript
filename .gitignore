@@ -14,6 +14,9 @@ dist-ssr
 .husky
 reports
 coverage
+cypress/screenshots
+cypress/videos
+cypress/reports
 
 # Editor directories and files
 .idea
