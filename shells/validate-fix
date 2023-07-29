@@ -2,4 +2,10 @@
 
 concurrently --names "Lints" --prefix-colors "yellow.bold" "npm:lint:fix --silent" &&
   echo &&
-  concurrently --kill-others-on-fail --names "Build,Test" --prefix-colors "bgGreen.bold,bgMagenta.bold" "npm:build --silent" "npm:test --silent"
+  concurrently \
+    --kill-others-on-fail \
+    --names "Build,Unit Test,Test Component" \
+    --prefix-colors "bgGreen.bold,bgMagenta.bold,bgCyan.bold" \
+    "npm:build --silent" \
+    "npm:test --silent" \
+    "npm:cy:run:component --silent"

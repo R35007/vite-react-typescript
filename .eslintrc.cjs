@@ -24,9 +24,21 @@ module.exports = defineConfig({
   ],
   overrides: [
     {
-      files: ['*.test.{ts|tsx}'],
+      files: ['*.test.{ts|tsx}', '*.cy.ts'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
+      },
+    },
+    {
+      files: ['*.cy.ts'],
+      rules: {
+        '@typescript-eslint/no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        'func-names': 'off',
+        'no-console': 'off',
+        'promise/always-return': 'off',
+        'promise/catch-or-return': 'off',
+        'promise/no-nesting': 'off',
       },
     },
   ],
