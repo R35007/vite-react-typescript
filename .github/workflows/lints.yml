@@ -31,5 +31,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Lint
-        run: npm run lint
+      - name: ESLint
+        run: npm run lint:scripts
+
+      - name: Stylelint
+        run: npm run lint:styles
+
+      - name: Prettier Lint
+        run: npm run format
+
+      - name: Compile TS
+        run: npm run lint:ts
