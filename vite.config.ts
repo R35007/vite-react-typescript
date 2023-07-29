@@ -10,9 +10,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [tsconfigPaths(), react(), svgr()],
   test: {
-    // coverage: {
-    //   reporter: ['text', 'html'],
-    // },
     environment: 'jsdom',
     globals: true,
     setupFiles: ['./src/setupTests.ts'],
