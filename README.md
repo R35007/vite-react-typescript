@@ -2,7 +2,7 @@
 
 ![Build](https://github.com/R35007/vite-react-typescript/actions/workflows/build.yml/badge.svg) ![Lints](https://github.com/R35007/vite-react-typescript/actions/workflows/lints.yml/badge.svg) ![Tests](https://github.com/R35007/vite-react-typescript/actions/workflows/tests.yml/badge.svg) ![Cypress](https://github.com/R35007/vite-react-typescript/actions/workflows/cypress.yml/badge.svg)
 
-A simple vite react typescript starter template with husky, conventional commit, eslint, stylelint, prettier, sass, tailwindcss, material ui, tanstack routing, redux and saga, vitest and cypress
+> A simple vite react typescript starter template with husky, conventional commit, eslint, stylelint, prettier, sass, tailwindcss, material ui, tanstack routing, redux and saga, vitest and cypress
 
 ## [Trying this Online!](https://codesandbox.io/p/github/R35007/vite-react-typescript/main?file=/src/main.tsx)
 
@@ -12,22 +12,22 @@ A simple vite react typescript starter template with husky, conventional commit,
 
 This template setup will include following features.
 
-| ✅  | Feature                                | Branch Name                |
-| --- | -------------------------------------- | :------------------------- |
-| ✅  | Generate Vite + React + Typescript App | feature/1/starter          |
-| ✅  | Husky                                  | feature/2/husky            |
-| ✅  | Conventional Commit                    | feature/3/commitlint       |
-| ✅  | ESLint Airbnb Config and Plugins       | feature/4/eslint           |
-| ✅  | StyleLint                              | feature/5/stylelint        |
-| ✅  | Prettier format                        | feature/6/prettier         |
-| ✅  | Lint Staged                            | feature/7/lint-staged      |
-| ✅  | Sass + Tailwind css                    | feature/8/tailwindcss      |
-| ✅  | Material UI                            | feature/9/material-ui      |
-| ✅  | React Router Setup                     | feature/10/tanstack-router |
-| ✅  | Redux + Redux Toolkit                  | feature/11/react-redux     |
-| ✅  | Redux Saga                             | feature/12/react-saga      |
-| ✅  | Vitest + RTL                           | feature/13/vitest          |
-| ✅  | Cypress E2E Testing                    | feature/14/cypress         |
+| ✅  | Feature                                                                                                                                                                           | Branch Name                |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- |
+| ✅  | [Generate Vite](https://vitejs.dev/) + [React](https://react.dev/) + [Typescript](https://www.typescriptlang.org/)                                                                | feature/1/starter          |
+| ✅  | [Husky](https://typicode.github.io/husky/)                                                                                                                                        | feature/2/husky            |
+| ✅  | [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) + [Commitlint](https://commitlint.js.org/#/) + [Commitizen](https://commitizen-tools.github.io/commitizen/) | feature/3/commitlint       |
+| ✅  | [ESLint](https://eslint.org/)                                                                                                                                                     | feature/4/eslint           |
+| ✅  | [StyleLint](https://stylelint.io/)                                                                                                                                                | feature/5/stylelint        |
+| ✅  | [Prettier format](https://prettier.io/)                                                                                                                                           | feature/6/prettier         |
+| ✅  | [Lint Staged](https://github.com/okonet/lint-staged#readme)                                                                                                                       | feature/7/lint-staged      |
+| ✅  | [Sass](https://sass-lang.com/) + [Tailwind Css](https://tailwindcss.com/)                                                                                                         | feature/8/tailwindcss      |
+| ✅  | [Material UI](https://mui.com/)                                                                                                                                                   | feature/9/material-ui      |
+| ✅  | [Tanstack Router](https://tanstack.com/router/v1)                                                                                                                                 | feature/10/tanstack-router |
+| ✅  | [Redux](https://redux.js.org/) + [Redux Toolkit](https://redux-toolkit.js.org/)                                                                                                   | feature/11/react-redux     |
+| ✅  | [Redux Saga](https://redux-saga.js.org/)                                                                                                                                          | feature/12/react-saga      |
+| ✅  | [Vitest](https://vitest.dev/) + [RTL](https://testing-library.com/docs/react-testing-library/intro/)                                                                              | feature/13/vitest          |
+| ✅  | [Cypress](https://www.cypress.io/)                                                                                                                                                | feature/14/cypress         |
 
 ## Installation
 
