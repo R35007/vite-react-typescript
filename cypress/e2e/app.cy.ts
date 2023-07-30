@@ -1,9 +1,9 @@
 describe('Vite React Typescript Template Test Suite', () => {
   it('should navigate to about page', () => {
     cy.visit('/');
-    cy.get('.MuiCardHeader-content > .MuiTypography-root').should('contain.text', 'Home Page');
+    cy.findByRole('heading', { level: 5 }).should('contain.text', 'Home Page');
     cy.get('button>a:contains("About")').click();
-    cy.get('.MuiCardHeader-content > .MuiTypography-root').should('contain.text', 'About Page');
+    cy.findByRole('heading', { level: 5 }).should('contain.text', 'About Page');
   });
 
   it('should perform counter operations', () => {
@@ -45,7 +45,7 @@ describe('Vite React Typescript Template Test Suite', () => {
     cy.get('.Counter [role="note"]').should('contain.text', 'count is -1');
 
     cy.get('button>a:contains("About")').click();
-    cy.get('.MuiCardHeader-content > .MuiTypography-root').should('contain.text', 'About Page');
+    cy.findByRole('heading', { level: 5 }).should('contain.text', 'About Page');
 
     cy.get('.Counter [role="note"]').should('contain.text', 'count is -1');
   });
