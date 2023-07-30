@@ -16,32 +16,32 @@ describe('<Counter />', () => {
       </ThemeProvider>
     );
 
-    cy.contains('Decrement By 1').click();
+    cy.findByRole('button', { name: 'Decrement' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is -1');
 
-    cy.contains('Increment By 1').click();
+    cy.findByRole('button', { name: 'Increment' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is 0');
 
     cy.get('input.MuiInput-input').clear().type('5');
-    cy.contains('Increment By Value').click();
+    cy.findByRole('button', { name: 'Increment By Value' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is 5');
 
     cy.get('input.MuiInput-input').clear().type('-5');
-    cy.contains('Increment By Value').click();
+    cy.findByRole('button', { name: 'Increment By Value' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is 0');
 
-    cy.contains('Decrement Async By 1').click();
+    cy.findByRole('button', { name: 'Decrement Async' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is -1');
 
-    cy.contains('Increment Async By 1').click();
+    cy.findByRole('button', { name: 'Increment Async' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is 0');
 
     cy.get('input.MuiInput-input').clear().type('5');
-    cy.contains('Increment Async By Value').click();
+    cy.findByRole('button', { name: 'Increment Async By Value' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is 5');
 
     cy.get('input.MuiInput-input').clear().type('-5');
-    cy.contains('Increment Async By Value').click();
+    cy.findByRole('button', { name: 'Increment Async By Value' }).click();
     cy.get('.Counter [role="note"]').should('contain.text', 'count is 0');
   });
 });
