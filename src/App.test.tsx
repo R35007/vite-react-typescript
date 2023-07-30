@@ -10,7 +10,7 @@ describe('App', () => {
 
   it('should render Home Page by root route', () => {
     expect(screen.getByRole('heading', { name: /home page/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /vite \+ react/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /vite react typescript template/i })).toBeInTheDocument();
   });
 
   it('should render About Page on clicking about link', async () => {

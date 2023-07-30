@@ -39,19 +39,19 @@ function Counter() {
       </Box>
       <Box sx={{ boxShadow: 'none', display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
         <Button variant="contained" onClick={() => dispatch(actions.decrement())}>
-          Decrement By 1
+          Decrement
         </Button>
         <Button variant="contained" onClick={() => dispatch(actions.increment())}>
-          Increment By 1
+          Increment
         </Button>
         <Button variant="contained" onClick={() => dispatch(actions.incrementByAmount(parseInt(inputRef.current?.value || '0', 10)))}>
           Increment By Value
         </Button>
         <Button variant="contained" onClick={() => dispatch(actions.decrementAsync())}>
-          Decrement Async By 1
+          Decrement Async
         </Button>
         <Button variant="contained" onClick={() => dispatch(actions.incrementAsync())}>
-          Increment Async By 1
+          Increment Async
         </Button>
         <Button variant="contained" onClick={() => dispatch(actions.incrementByAmountAsync(inputRef.current?.value))}>
           Increment Async By Value

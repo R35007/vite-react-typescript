@@ -4,9 +4,9 @@
 
 A simple vite react typescript starter template with husky, conventional commit, eslint, stylelint, prettier, sass, tailwindcss, material ui, tanstack routing, redux and saga, vitest and cypress
 
-## [Trying this Online!](https://codesandbox.io/p/github/R35007/vite-react-typescript/main?file=%2Fsrc%2FApp.tsx)
+## [Trying this Online!](https://codesandbox.io/p/github/R35007/vite-react-typescript/main?file=/src/main.tsx)
 
-![image](https://github.com/R35007/vite-react-typescript/assets/23217228/4cb162b2-4c6a-4c5a-a1cc-e9022b049fdd)
+![image](https://github.com/R35007/vite-react-typescript/assets/23217228/09dfc7f4-bf2f-4b6b-9885-3476099164ff)
 
 ## Features
 
@@ -93,6 +93,7 @@ npm run prepare               # create Husky hooks
 npm run clean                 # removes node_modules package-lock.json .husky dist reports
 npm run uninstall:husky       # uninstall husky and remove .husky folder
 npm run uninstall:tailwindcss # uninstall tailwindcss and its related plugins
+npm run uninstall:cypress     # uninstall cypress and its related plugins and test files
 npm run commit                # cli prompt for conventional commit
 ```
 

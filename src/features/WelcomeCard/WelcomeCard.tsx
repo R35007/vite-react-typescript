@@ -3,7 +3,6 @@ import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
 
 // svgs
 import reactLogo from '~assets/react.svg';
@@ -17,11 +16,10 @@ import Logo from './Logo.style';
 
 function WelcomeCard({ title = 'Welcome' }: { title: string }) {
   return (
-    <Card
-      sx={{ background: 'palette.background.paper', margin: 'auto', maxWidth: '45rem', textAlign: 'center' }}
-      className=" WelcomeCard p-8"
-    >
-      <CardHeader component="h1" title={title} />
+    <Card sx={{ background: 'palette.background.paper', margin: 'auto', textAlign: 'center' }} className=" WelcomeCard p-8">
+      <Typography component="h1" sx={{ fontSize: '2.5rem' }}>
+        Vite React Typescript Template
+      </Typography>
       <CardContent sx={{ padding: '0' }}>
         <Logo className="inline-block" href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -30,7 +28,7 @@ function WelcomeCard({ title = 'Welcome' }: { title: string }) {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </Logo>
       </CardContent>
-      <Typography variant="h3">Vite + React</Typography>
+      <Typography variant="h5">{title}</Typography>
       <CardContent className="p-0">
         <Counter />
         <Typography className="my-5">

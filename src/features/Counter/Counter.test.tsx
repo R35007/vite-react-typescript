@@ -21,13 +21,13 @@ describe('Counter Feature Test Suite', () => {
   });
 
   it('should increment by 1', async () => {
-    const $incrementButton = screen.getByRole('button', { name: 'Increment By 1' });
+    const $incrementButton = screen.getByRole('button', { name: 'Increment' });
     await userEvent.click($incrementButton);
     expect(screen.getByRole('note').textContent).toBe('count is 1');
   });
 
   it('should decrement by 1', async () => {
-    const $decrementButton = screen.getByRole('button', { name: 'Decrement By 1' });
+    const $decrementButton = screen.getByRole('button', { name: 'Decrement' });
     await userEvent.click($decrementButton);
     expect(screen.getByRole('note').textContent).toBe('count is -1');
   });
@@ -51,14 +51,14 @@ describe('Counter Feature Test Suite', () => {
   });
 
   it('should increment async by 1', async () => {
-    const $incrementAsyncButton = screen.getByRole('button', { name: 'Increment Async By 1' });
+    const $incrementAsyncButton = screen.getByRole('button', { name: 'Increment Async' });
     await userEvent.click($incrementAsyncButton);
 
     await waitFor(() => expect(screen.getByRole('note').textContent).toBe('count is 1'), { timeout: 1000 });
   });
 
   it('should decrement async by 1', async () => {
-    const $decrementAsyncButton = screen.getByRole('button', { name: 'Decrement Async By 1' });
+    const $decrementAsyncButton = screen.getByRole('button', { name: 'Decrement Async' });
     await userEvent.click($decrementAsyncButton);
 
     await waitFor(() => expect(screen.getByRole('note').textContent).toBe('count is -1'), { timeout: 1000 });
